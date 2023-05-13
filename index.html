@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+</head>
+<body>
+
+	<div class="message" id="message">
+		<p>Do you want enable the sound?</p>
+		<button class="message__button" onclick="enableSound()">Confirm</button>
+		<button class="message__button message__button--cancel" onclick="message.hidden = true">Cancel</button>
+	</div>
+
+    <div class="clock">
+        <div class="clock-hand" id="hours"></div>
+        <div class="clock-hand" id="minutes"></div>
+        <div class="clock-hand" id="seconds"></div>
+
+        <div class="clock-center"></div>
+
+        <span class="number n12">12</span>
+        <span class="number n3">3</span>
+        <span class="number n6">6</span>
+        <span class="number n9">9</span>
+    </div>
+    
+    <audio src="clock-sound.mp3" id="clock-sound" preload="true"></audio>
+    <script src="main.js"></script>
+</body>
+</html>

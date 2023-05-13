@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(125, 192, 255) url(image.jpg) no-repeat center;
+	background-size: cover;
+	overflow: hidden;
+	backdrop-filter: blur(6px);
+	color: #333;
+}
+
+.message {
+	position: absolute;
+	z-index: 10;
+	right: 1em;
+	top: 1em;
+	background-color: #fff;
+	border-radius: 1em;
+	padding: 1em;
+	text-align: center;
+	box-shadow: 0 0 30px #c9c9c9;
+}
+
+.message__button {
+	cursor: pointer;
+	padding: 0.8em 1em;
+	background-color: rgb(64, 169, 240);
+	color: #fff;
+	border: none;
+	border-radius: 3em;
+	margin-top: .5em;
+	transition: .3s;
+}
+
+.message__button:hover {
+	background-color: rgb(0, 153, 255);
+}
+
+.message__button--cancel {
+	background-color: #fff;
+	border: 2px solid #333;
+	color: #333;
+}
+
+.message__button--cancel:hover {
+	background-color: #333;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.clock {
+	background-color: rgba(240, 240, 240, .9);
+	border-radius: 50%;
+	border: 2em solid rgb(64, 169, 240);
+	height: 40em;
+	width: 40em;
+	max-width: 90vh;
+	max-height: 90vh;
+	position: relative;
+	aspect-ratio: 1/1;
+	box-shadow: 0 0 30px rgb(64, 169, 240);
+}
+
+.clock-center {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background-color: rgb(64, 169, 240);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clock-hand {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	background-color: #333;
+	width: 35%;
+	height: 0.5em;
+	transform-origin: right;
+	transform: translateY(-50%) rotate(90deg);
+	transition: .3s cubic-bezier(0.77, -0.93, 0.38, 2.44);
+	border-radius: 4px;
+}
+
+#seconds {
+	width: 37%;
+	height: .25em;
+	background-color: rgb(255, 64, 64);
+}
+
+#hours {
+	width: 25%;
+}
+
+.number {
+	font-size: 2.5rem;
+	display: block;
+	position: absolute;
+}
+
+.n12 {
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0.5em;
+}
+
+.n3 {
+	right: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.n6 {
+	bottom: 0.5em;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.n9 {
+	left: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@media (orientation: portrait) {
+	.clock {
+		max-height: 90vw;
+		max-width: 90vw;
+	}
+}
