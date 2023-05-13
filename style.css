@@ -88,7 +88,7 @@ body {
 	width: 35%;
 	height: 0.5em;
 	transform-origin: right;
-	transform: translateY(-50%) rotate(90deg);
+	transform: translate(50%, -50%) rotate(90deg);
 	transition: .3s cubic-bezier(0.77, -0.93, 0.38, 2.44);
 	border-radius: 4px;
 }
